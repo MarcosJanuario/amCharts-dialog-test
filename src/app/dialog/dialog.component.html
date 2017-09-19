@@ -1,0 +1,14 @@
+<h2 md-dialog-title>Delete all</h2>
+<md-dialog-content>
+  <h3>Test content</h3>
+  <div *ngFor="let data of data.dataProvider" style="border-bottom: 1px solid black">
+    <p>Date: {{data.date}}</p>
+    <p>Column 1: {{data.column1}}</p>
+    <p>Column 2: {{data.column2}}</p>
+  </div>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-button md-dialog-close>No</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button md-button [md-dialog-close]="true">Yes</button>
+</md-dialog-actions>
